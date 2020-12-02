@@ -10,6 +10,12 @@ curl -sb session=<token> https://adventofcode.com/2020/day/<day>/input
 
 with valid \<token> and \<day>, then pipe with `sed` command of the day.
 
+### Day2
+
+```bash
+sed -r 's/\x2D/\x20/;s/([a-z])\x3A/\\\1/;s/([a-z]{2,})/\x22\1\x22/g;s/^/\[/;s/$/\]/'
+```
+
 ## License
 
 Copyright © 2020 Patrick Schaffrath
